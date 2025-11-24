@@ -42,7 +42,7 @@ router.delete("/:id",async(req,res)=>{
     try{
         const{id}=req.params
 
-        if(isNaN(id)(paraseInt(id))){
+        if(isNaN(parseInt(id))){
             return res.status(400).json({message:"Invalid transaction ID"})
         }
 
